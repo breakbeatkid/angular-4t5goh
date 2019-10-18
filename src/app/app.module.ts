@@ -1,26 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OverlayModule } from '@angular/cdk/overlay';
 
 import { AppComponent } from './app.component';
-import { OverlayTooltipDirective } from './overlay-tooltip/overlay-tooltip.directive';
-import { OverlayTooltipComponent } from './overlay-tooltip/overlay-tooltip.component';
+import { OverlayTooltipModule } from './overlay-tooltip/overlay-tooltip.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OverlayTooltipDirective,
-    OverlayTooltipComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    OverlayModule,
+    OverlayTooltipModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [OverlayTooltipComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
